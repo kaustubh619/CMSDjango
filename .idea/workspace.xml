@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e99ad91-b0d9-4404-b9fe-9ed26a7a5337" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/baseApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/baseApp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
