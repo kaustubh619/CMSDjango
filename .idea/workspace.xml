@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e99ad91-b0d9-4404-b9fe-9ed26a7a5337" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customCMS/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/customCMS/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,24 +16,6 @@
         <option value="Python Script" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>Ca</find>
-      <find>activated_categ</find>
-      <find>CategorySerializer</find>
-      <find>CategoryCMSView</find>
-      <find>product_image</find>
-      <find>9000</find>
-      <find>about_cms</find>
-      <find>UpdatesByProduct</find>
-      <find>updatebyproduct</find>
-      <find>AboutCMSView</find>
-      <find>ActivatedFooterCMSView</find>
-      <find>authenticate</find>
-      <find>authorize</find>
-      <find>auth</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
