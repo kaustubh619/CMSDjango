@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e99ad91-b0d9-4404-b9fe-9ed26a7a5337" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMS/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CMS/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMS/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CMS/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baseApp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/baseApp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baseApp/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/baseApp/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/baseApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/baseApp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baseApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/baseApp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
