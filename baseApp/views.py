@@ -132,7 +132,7 @@ class UserAdditionalDetailsView(APIView):
 
     def put(self, request, pk):
         user_ext = self.get_object(pk)
-        serializer = UserAdditionalDetailsSerializer(user_ext, data=request.data)
+        serializer = UserAdditionalDetailsSerializer(user_ext, data=request.data, context={"request": request})
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
