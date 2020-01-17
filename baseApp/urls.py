@@ -32,4 +32,5 @@ urlpatterns = [
     path('deleteproductupdate/<int:pk>', views.DeleteProductUpdate.as_view()),
     path('editProductUpdate/<int:pk>', views.EditProductUpdate.as_view()),
     path('oauth/login/', views.SocialLoginView.as_view()),
+    path('user_count', views.UserCount.as_view()),
 ]

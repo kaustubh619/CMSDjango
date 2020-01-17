@@ -87,6 +87,12 @@ def register_user(request):
 
 
 @permission_classes((AllowAny,))
+class UserCount(generics.ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+
+@permission_classes((AllowAny,))
 class CategoryView(generics.ListAPIView):
     queryset = Category.objects.filter(deleted_flag=False)
     serializer_class = CategorySerializer
@@ -298,7 +304,7 @@ class ProductUploadImage(APIView):
         for i in self.request.FILES:
             array = {}
             array['success'] = 1
-            res['url'] = 'http://127.0.0.1:8000/media/product_images/' + handle_uploaded_file(self.request.FILES[i])
+            res['url'] = 'http://103.228.113.9/media/product_images/' + handle_uploaded_file(self.request.FILES[i])
             array['file'] = res
         return Response(array)
 
