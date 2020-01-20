@@ -33,4 +33,8 @@ urlpatterns = [
     path('editProductUpdate/<int:pk>', views.EditProductUpdate.as_view()),
     path('oauth/login/', views.SocialLoginView.as_view()),
     path('user_count', views.UserCount.as_view()),
+<<<<<<< HEAD
 ]
+=======
+]
+>>>>>>> 075f2352f3d91a3fc297fa5b48fe0a7d3d56e564

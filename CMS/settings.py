@@ -25,7 +25,7 @@ SECRET_KEY = 'pz7w#lo0e975_pfv4wc$2q4rw6ns4@0q2%r$kzune_qxpz-3(j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["103.228.113.9", "localhost", "www.ft500.in", "ft500.in"]
 
 
 # Application definition
@@ -147,8 +147,17 @@ WSGI_APPLICATION = 'CMS.wsgi.application'
 
 DATABASES = {
     'default': {
+<<<<<<< HEAD
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+=======
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'djangocms',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '3306',
+>>>>>>> 075f2352f3d91a3fc297fa5b48fe0a7d3d56e564
     }
 }
 
@@ -190,6 +199,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
