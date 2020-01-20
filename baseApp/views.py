@@ -410,7 +410,7 @@ class AllStartupListing(APIView):
 
     def get(self, request):
         startup = self.get_object()
-        StartUp = StartupSerializer(startup, many=True, context={"request": request})
+        StartUp = StartupSerializerWithDepth(startup, many=True, context={"request": request})
         return Response(StartUp.data)
 
 
@@ -621,6 +621,12 @@ class SocialLoginView(generics.GenericAPIView):
                 "id": authenticated_user.id
             }
             return Response(status=status.HTTP_200_OK, data=response)
+
+
+@permission_classes((AllowAny,))
+class UserCount(generics.ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
 
 

@@ -74,6 +74,8 @@ class StartUp(models.Model):
     partnerships_associations = models.CharField(max_length=500, blank=True, null=True)
     funding_round = models.IntegerField(default=0, blank=True, null=True)
     category = models.ForeignKey(Category, on_delete=models.PROTECT)
+    featured = models.BooleanField(default=False)
+    thumbnail = models.ImageField(upload_to='startup_images', blank=True, null=True)
 
     def __str__(self):
         return self.name
