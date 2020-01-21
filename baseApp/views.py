@@ -635,6 +635,21 @@ class UserCount(generics.ListAPIView):
     serializer_class = UserSerializer
 
 
+@permission_classes((AllowAny,))
+class FeaturedStartupListing(APIView):
+    def get_object(self):
+        try:
+            obn = StartUp.objects.filter(deleted_flag=False)
+            obj = obn.filter(featured=True)
+            return obj
+        except StartUp.DoesNotExist:
+            raise Http404
+
+    def get(self, request):
+        startup = self.get_object()
+        StartUp = StartupSerializerWithDepth(startup, many=True, context={"request": request})
+        return Response(StartUp.data)
+
 
 
 
