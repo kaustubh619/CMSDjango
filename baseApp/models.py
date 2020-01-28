@@ -87,7 +87,7 @@ class Product(models.Model):
     updated_by = models.ForeignKey(User, on_delete=models.PROTECT, blank=True, null=True)
     updated_date = models.DateField(blank=True, null=True)
     deleted_flag = models.BooleanField(default=False)
-    startup_name = models.ForeignKey(StartUp, on_delete=models.PROTECT)
+    startup_name = models.ForeignKey(StartUp, related_name='startup_products', on_delete=models.PROTECT)
     stage = models.IntegerField()
     product_name = models.CharField(max_length=100)
     description = models.TextField()
@@ -111,3 +111,14 @@ class Updates(models.Model):
 
     def __str__(self):
         return str(self.product)
+
+
+class ProductRatingsAndReviews(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    ratings = models.IntegerField(default=0)
+    reviews = models.TextField(blank=True, null=True)
+    added_date = models.DateField(default=datetime.now)
+
+    def __str__(self):
+        return str(self.product) + " - " + str(self.user)
