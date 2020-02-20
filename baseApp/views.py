@@ -26,6 +26,8 @@ from social_django.utils import load_strategy, load_backend
 from social_core.exceptions import MissingBackend, AuthTokenError, AuthForbidden
 from social_core.backends.oauth import BaseOAuth2
 from requests.exceptions import HTTPError
+from rest_framework import filters
+import logging
 
 jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
 jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
@@ -44,8 +46,10 @@ def get_client_ip(request):
 @api_view(["POST"])
 @permission_classes((AllowAny,))
 def user_signin(request):
-    username = request.data.get("username")
+    email = request.data.get("email")
     password = request.data.get("password")
+    user_obj = User.objects.get(email=email)
+    username = user_obj.username
     if username is None or password is None:
         return Response({'error': 'Please provide both username and password'},
                         status=HTTP_400_BAD_REQUEST)
@@ -717,6 +721,22 @@ class UserRatingsPutView(APIView):
 class UserProductReviews(generics.ListAPIView):
     queryset = ProductRatingsAndReviews.objects.all()
     serializer_class = RatingsSerializerWD
+
+
+@permission_classes((AllowAny,))
+class StartupSearch(generics.ListAPIView):
+    queryset = StartUp.objects.all()
+    serializer_class = StartupSerializer
+    filter_backends = [filters.SearchFilter,]
+    search_fields = ['name', 'description']
+
+    def get_queryset(self):
+        qs = StartUp.objects.all()
+        logging.debug(qs.query)
+        return qs
+
+
+
 
 
 

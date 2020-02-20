@@ -122,3 +122,12 @@ class ProductRatingsAndReviews(models.Model):
 
     def __str__(self):
         return str(self.product) + " - " + str(self.user)
+
+
+class Pitch_Campaign(models.Model):
+    startup = models.ForeignKey(StartUp, on_delete=models.CASCADE)
+    ppt_upload = models.FileField(upload_to='ppt_upload/', blank=True, null=True)
+    image_or_video_upload = models.FileField(upload_to='pitch_video_upload/', blank=True, null=True)
+
+    def __str__(self):
+        return str(self.startup)

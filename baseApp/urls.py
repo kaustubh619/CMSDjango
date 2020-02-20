@@ -39,4 +39,5 @@ urlpatterns = [
     path('update_ratings/<int:pk>', views.RatingsPutView.as_view()),
     path('user_update_ratings/<int:pk>', views.UserRatingsPutView.as_view()),
     path('all_ratings', views.UserProductReviews.as_view()),
+    path('startup_search', views.StartupSearch.as_view()),
 ]
